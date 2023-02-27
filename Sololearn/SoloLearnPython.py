@@ -10,7 +10,7 @@ def FindLongestWord(txt):
             temp_longest_word = word
     print(temp_longest_word)
 
-# Classic fibonacci formular
+# Answer to Fibonacci from the Sololearn Python Course
 num = int(input())
 def fibonacci(n):
 	if (n <= 1):
