@@ -9,3 +9,14 @@ def FindLongestWord(txt):
         if len(word) > len(temp_longest_word):
             temp_longest_word = word
     print(temp_longest_word)
+
+# Classic fibonacci formular
+num = int(input())
+def fibonacci(n):
+	if (n <= 1):
+		return n
+	else: 
+		return fibonacci(n-1) + fibonacci(n-2)
+#Prints the results from 0 to num
+for i in range(num):
+	print(fibonacci(i))
