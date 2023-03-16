@@ -1,5 +1,5 @@
 # Answer to longest word from the Sololearn Python Course
-# It takes an Input of Multiple words and returns the longest of them.
+# It takes an Input of Multiple words and returns the longest of them. Is also used for the solution of phone number Validator
 txt = input()
 
 def FindLongestWord(txt):
@@ -21,7 +21,7 @@ def fibonacci(n):
 for i in range(num):
 	print(fibonacci(i))
 	
-#Answe to Juice Maker from the Sololearn Python Course
+#Answer to Juice Maker from the Sololearn Python Course
 class Juice:
     def __init__(self, name, capacity):
         self.name = name
@@ -42,3 +42,12 @@ b = Juice('Apple', 2.0)
 
 result = a + b
 print(result)
+
+# Answe to Phone Number Validator from the Sololearn Phyton Course
+import re
+
+pattern = r"^[1, 8, 9]"
+if (len(txt) == 8 and re.match(pattern, txt)):
+     print("Valid")
+else: print("Invalid")     
+     
