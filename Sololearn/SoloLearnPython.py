@@ -43,11 +43,20 @@ b = Juice('Apple', 2.0)
 result = a + b
 print(result)
 
-# Answe to Phone Number Validator from the Sololearn Phyton Core Course
+# Answer to Phone Number Validator from the Sololearn Phyton Core Course
 import re
 
 pattern = r"^[1, 8, 9]"
 if (len(txt) == 8 and re.match(pattern, txt)):
      print("Valid")
 else: print("Invalid")     
-     
+
+# Answer to adding words from the SoloLearn Python Core Course
+
+def concatenate(*args):
+    result = args[0]
+    for i in range(1, len(args)):
+        result += "-{}".format(args[i])
+    return result    
+
+print(concatenate("I", "love", "Python", "!"))
