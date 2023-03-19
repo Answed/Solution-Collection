@@ -60,3 +60,18 @@ def concatenate(*args):
     return result    
 
 print(concatenate("I", "love", "Python", "!"))
+
+# Answer to Basketball Players from the Python for Data Science Course
+
+import numpy as np
+players = np.array([180, 172, 178, 185, 190, 195, 192, 200, 210, 190])
+
+mean = players.mean()
+standard_dev = np.std(players)
+# Players in range 
+player_in_range = 0
+for player in players:
+    if (mean - standard_dev <= player <= mean + standard_dev):
+        player_in_range += 1
+
+print(player_in_range)
