@@ -55,3 +55,18 @@ public class Kata
             return new string(charsList.ToArray());
         }
 }
+// Solution for the codewars challenge Sum Strings as Numbers
+// https://www.codewars.com/kata/5324945e2ece5e1f32000370
+
+public static class Kata
+{
+    public static string sumStrings(string a, string b)
+    {
+           if (String.IsNullOrEmpty(a))
+                return b;
+            if (String.IsNullOrEmpty(b))
+                return a;
+          
+          return (BigInteger.Parse(a) + BigInteger.Parse(b)).ToString();
+    }
+}
