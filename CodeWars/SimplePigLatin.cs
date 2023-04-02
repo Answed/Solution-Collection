@@ -70,3 +70,14 @@ public static class Kata
           return (BigInteger.Parse(a) + BigInteger.Parse(b)).ToString();
     }
 }
+
+// Solution for the codewars challange Last digit of a large number
+// https://www.codewars.com/kata/5511b2f550906349a70004e1
+
+  class LastDigit
+  {
+    public static int GetLastDigit(BigInteger n1, BigInteger n2)
+    {
+             return (int)BigInteger.ModPow(n1, n2, 10);
+    }
+  }
