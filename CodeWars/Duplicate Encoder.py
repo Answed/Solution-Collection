@@ -19,3 +19,19 @@ def duplicate_encode(word: str):
     else: endoded_word[-1] = "("
 
     return "".join(endoded_word)
+
+#Other Solutions
+
+def duplicate_encoder2(word):
+    word = word.upper()
+    result = ""
+    for char in word:
+        if word.count(char) > 1:
+            result += ")"
+        else:
+            result += "("
+            
+    return result
+
+def duplicate_encoder3(word):
+    return "".join(["(" if word.lower().count(c) == 1 else ")" for c in word.lower()])
