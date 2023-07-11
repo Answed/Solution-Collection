@@ -12,7 +12,6 @@ def duplicate_encode(word: str):
             endoded_word[i] = ")"
         else: endoded_word[i] = "("
     for  i in range(len(word)-1, 0, -1):
-        print(i-1)
         if(word[-1] == word[i-1]):
                 endoded_word[-1] = ")"
                 break
@@ -30,7 +29,6 @@ def duplicate_encoder2(word):
             result += ")"
         else:
             result += "("
-            
     return result
 
 def duplicate_encoder3(word):
