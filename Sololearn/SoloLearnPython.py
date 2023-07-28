@@ -97,3 +97,11 @@ df.set_index('date', inplace=True)
 df['ratio'] = df['deaths'] / df['cases']
 
 print(df.loc[df['ratio'] == df['ratio'].max() ])
+
+def count_vowels(text):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in text:
+        if char in vowels:
+            count += 1
+    return count
