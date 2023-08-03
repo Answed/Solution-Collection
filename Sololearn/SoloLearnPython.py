@@ -113,3 +113,6 @@ def string_operations(input):
 def replace_string(text, find, replace):
     print(text.count(find))
     print(text.replace(find, replace))
+
+def letter_frequency(text, letter):
+     print(int(text.count(letter)/len(text)*100))
