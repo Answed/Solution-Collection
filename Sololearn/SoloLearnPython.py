@@ -109,3 +109,7 @@ def count_vowels(text):
 def string_operations(input):
     for i in range(len(input)):
         print(input[i] * (i+1))
+
+def replace_string(text, find, replace):
+    print(text.count(find))
+    print(text.replace(find, replace))
