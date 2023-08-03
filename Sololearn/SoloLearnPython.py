@@ -105,3 +105,7 @@ def count_vowels(text):
         if char in vowels:
             count += 1
     return count
+
+def string_operations(input):
+    for i in range(len(input)):
+        print(input[i] * (i+1))
