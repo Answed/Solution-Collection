@@ -116,3 +116,18 @@ def replace_string(text, find, replace):
 
 def letter_frequency(text, letter):
      print(int(text.count(letter)/len(text)*100))
+
+def list_operation():
+    data = [
+    [23, 11, 5, 14],
+    [8, 32, 20, 5]
+    ]
+    color = input()
+    if(color == "brown"):
+        print(int((data[0][0]+data[1][0]) / 118 * 100))
+    elif(color == "blue"):
+        print(int((data[0][1]+data[1][1]) / 118 * 100))
+    elif(color =="green"):
+        print(int((data[0][2]+data[1][2]) / 118 * 100))
+    else: 
+        print(int((data[0][3]+data[1][3]) / 118 * 100))
