@@ -131,3 +131,11 @@ def list_operation():
         print(int((data[0][2]+data[1][2]) / 118 * 100))
     else: 
         print(int((data[0][3]+data[1][3]) / 118 * 100))
+
+def above_average(list):
+    average_cost = sum(list)/len(list)
+    above_range = 0
+    for price in list:
+        if(price >= average_cost):
+            above_range += 1
+    print(above_range)
