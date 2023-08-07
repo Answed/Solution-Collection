@@ -142,3 +142,8 @@ def above_average(list):
 
 def list_comprehensions(n):
     result = [n*2**i for i in range(12)]
+
+def average_word_lenght(text):
+    amount_of_words = text.split()
+    amount_of_letters = len(text) - len(amount_of_words) + 1
+    return print(amount_of_letters / len(amount_of_words))
