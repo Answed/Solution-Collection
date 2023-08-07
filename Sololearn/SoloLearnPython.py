@@ -139,3 +139,6 @@ def above_average(list):
         if(price >= average_cost):
             above_range += 1
     print(above_range)
+
+def list_comprehensions(n):
+    result = [n*2**i for i in range(12)]
