@@ -1,3 +1,5 @@
+import math as mt
+
 # Answer to longest word from the Sololearn Python Core Course
 # It takes an Input of Multiple words and returns the longest of them. Is also used for the solution of phone number Validator
 txt = input()
@@ -152,3 +154,11 @@ def findObjectInDic(dic, key):
     if key in dic:
         print(dic[key][1])
     else: print("Not found")
+
+def smallest_dist(points):
+    for point in points:
+        x,y = point
+        temp_dist = mt.sqrt(x**2+y**2)
+        if(temp_dist < current_sm_dis):
+            current_sm_dis = temp_dist
+    return current_sm_dis
