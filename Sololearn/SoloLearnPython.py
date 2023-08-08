@@ -147,3 +147,8 @@ def average_word_lenght(text):
     amount_of_words = text.split()
     amount_of_letters = len(text) - len(amount_of_words) + 1
     return print(amount_of_letters / len(amount_of_words))
+
+def findObjectInDic(dic, key):
+    if key in dic:
+        print(dic[key][1])
+    else: print("Not found")
