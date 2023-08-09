@@ -163,7 +163,10 @@ def smallest_dist(points):
             current_sm_dis = temp_dist
     return current_sm_dis
 
-
+def find_same_words(input1, input2):
+    words1 = input1.split()
+    words2 = input2.split()
+    return(len(set(words1)&set(words2)))
 
 data = {
     "100-90": 25, "42-01": 48, "55-09": 12, "128-64": 71, "002-22": 18, "321-54": 19, 
