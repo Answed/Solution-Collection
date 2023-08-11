@@ -247,3 +247,38 @@ while True:
 
     if(c.is_empty()): break
 print(time_requierd)
+
+class Track:
+    def __init__(self, title, next):
+        self.title = title
+        self.next = next
+
+class Player:
+    def __init__(self):
+        self.head = None
+
+    def add(self, title):
+        if not self.head:
+            self.head = Track(title, None)
+            return
+        curr = self.head
+        while curr.next:
+            curr = curr.next
+        curr.next = Track(title, None)
+    def play(self):
+        cur_node = self.head
+        print(cur_node.title)
+        while cur_node.next !=None:
+            cur_node = cur_node.next
+            print(cur_node.title)
+
+
+p = Player()
+while True:
+    x = input()
+    if x == 'end':
+        break
+    p.add(x)
+
+#your code goes here
+p.play()
