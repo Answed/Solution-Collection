@@ -190,3 +190,37 @@ base_income = calculateIncome(18, data)
 new_income = calculateIncome(age, data)
 grwoth = ((new_income - base_income)/base_income)*100
 print(int(grwoth))
+
+class CallCenter:
+    def __init__(self):
+      self.customers = []
+
+    def is_empty(self):
+      return self.customers == []
+
+    def add(self, x):
+      self.customers.insert(0, x)
+
+    def next(self):
+      return self.customers.pop()
+
+
+c = CallCenter()
+
+while True:
+    n = input()
+    if n == 'end':
+        break
+    c.add(n)
+
+#your code goes here
+time_requierd = 0
+
+while True:
+    current_customer = c.next()
+    if(current_customer == "general"):
+       time_requierd += 5
+    else: time_requierd += 10
+
+    if(c.is_empty()): break
+print(time_requierd)
