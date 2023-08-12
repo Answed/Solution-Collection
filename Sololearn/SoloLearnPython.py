@@ -320,3 +320,32 @@ for connection in range(5):
         print(x.adj[n-1][connection-1])
         connections += 1
 print(connections)
+
+class Stack():
+    def __init__(self, data = []) -> None:
+        self.data = data
+    
+    def push(self, value):
+        self.data.insert(0, value)
+    
+    def pop(self):
+        return self.data.pop(0)
+
+def balanced(expression):
+    parentheses = Stack()
+    for char in expression:
+        if(char == "("):
+            parentheses.push(1)
+        elif(char == ")"):
+            if(len(parentheses.data) == 0):
+                parentheses.push(1)
+                break
+            else: parentheses.pop()
+            
+
+    if(len(parentheses.data) == 0):
+        return True
+    else: return False
+
+
+print(balanced(input()))
