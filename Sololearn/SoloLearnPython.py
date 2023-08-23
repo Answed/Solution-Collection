@@ -349,3 +349,13 @@ def balanced(expression):
 
 
 print(balanced(input()))
+
+def euklid(int1, int2):
+    result = int1%int2
+    if(result == 0):return int2
+    return  euklid(int2, result)
+
+def find_q(int1, int2, result = 0):
+    if(int1 - int2 < 0):
+        return result
+    else: return find_q(int1-int2, int2, result + 1)
