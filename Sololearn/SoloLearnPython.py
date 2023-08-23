@@ -359,3 +359,20 @@ def find_q(int1, int2, result = 0):
     if(int1 - int2 < 0):
         return result
     else: return find_q(int1-int2, int2, result + 1)
+
+def extended_euklid(int1, int2):
+    iterations = []
+    ggT = 10000
+    while(ggT != 0):
+        ggT = int1 % int2
+        iterations.append(find_q(int1, int2))
+        int1, int2 = int2, ggT
+    
+    x,y = 0, 1
+
+    for i in range(2, len(iterations)+1):
+        temp_x = y
+        y = x - iterations[-i]*y
+        x = temp_x
+        print(x,y)
+    return x,y
