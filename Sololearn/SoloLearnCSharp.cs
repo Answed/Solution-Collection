@@ -59,3 +59,42 @@ namespace SoloLearn
         }
     }
 }
+namespace Code_Coach_Challenge
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string postText = Console.ReadLine();
+
+            Post post = new Post();
+            post.Text = postText;
+            post.ShowPost();
+
+        }
+    }
+
+    class Post
+    {
+        private string text;
+
+        public string Text
+        {
+            get { return text; }
+            set { text = value; }
+        }
+
+        //write a constructor here
+
+        public Post()
+        {
+            Console.WriteLine("New Post");
+        }
+
+
+        public void ShowPost()
+        {
+            Console.WriteLine(text);
+        }
+
+    }
