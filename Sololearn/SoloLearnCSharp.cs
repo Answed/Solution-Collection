@@ -98,3 +98,16 @@ namespace Code_Coach_Challenge
         }
 
     }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] games = { "Alien Shooter", "Tic Tac Toe", "Snake", "Puzzle", "Football" };
+
+            int input = int.Parse(Console.ReadLine());
+
+            try { Console.WriteLine(games[input]); }
+            catch { Console.WriteLine("Invalid "); }
+        }
+    }
