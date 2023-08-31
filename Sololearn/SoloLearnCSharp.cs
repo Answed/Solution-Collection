@@ -186,4 +186,23 @@ namespace SoloLearn
             Console.WriteLine(numbers.Max() + numbers.Min());
         }
     }
+
+        class Program
+    {
+        static void Main(string[] args)
+        {
+            string password = Console.ReadLine();
+            char[] notAllowedSymbols = { '!', '#', '$', '%', '&', '(', ')', '*', ',', '+', '-' };
+
+            foreach (char c in notAllowedSymbols)
+            {
+                if (password.Contains(c))
+                {
+                    Console.WriteLine("Invalid");
+                    return;
+                }
+            }
+            
+        }
+    }
 }
