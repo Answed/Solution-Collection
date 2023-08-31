@@ -137,4 +137,22 @@ namespace Code_Coach_Challenge
             Console.WriteLine(sumOfEven);
         }
     }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] num = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            for(int i = 0;  i < num.GetLength(0); i++)
+            {
+                for(int y = 0 ; y < num.GetLength(1); y++)
+                {
+                    Console.Write(num[i,y]);
+                }
+                Console.WriteLine();
+            }  
+
+        }
+    }
 }
