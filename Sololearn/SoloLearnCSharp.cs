@@ -152,7 +152,21 @@ namespace Code_Coach_Challenge
                 }
                 Console.WriteLine();
             }  
+        }
+        public static void WriteWinner(string[][] olympiad)
+        {
+            int[] winner = new int[3];
 
+            for (int i = 0; i < winner.Length; i++)
+            {
+                winner[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (int i = 0; i < olympiad.Length; i++)
+            {
+                Console.WriteLine(olympiad.Length);
+                Console.WriteLine(olympiad[i][winner[i]-1]);
+            }
         }
     }
 }
