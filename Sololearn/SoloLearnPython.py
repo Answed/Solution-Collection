@@ -376,3 +376,13 @@ def extended_euklid(int1, int2):
         x = temp_x
         print(x,y)
     return x,y
+
+def extended_euklid_rec(int1, int2):
+    result = int1%int2
+    q = find_q(int1, int2)
+    if(result == 0):return 0, 1
+    else : x, y = extended_euklid_rec(int2, result)
+    temp_x = y
+    y = x - q*y
+    x = temp_x
+    return x, y
