@@ -37,8 +37,6 @@ class Juice:
     def __str__(self):
         return (self.name + ' ('+str(self.capacity)+'L)')
 
-
-
 a = Juice('Orange', 1.5)
 b = Juice('Apple', 2.0)
 
@@ -201,9 +199,7 @@ class Browser:
     def push(self, link):
       self.links.insert(0, link)
     def pop(self):
-      return self.links.pop(0)
-    
-    
+      return self.links.pop(0)  
   
 x = Browser()
 x.push('about:blank')
@@ -226,7 +222,6 @@ class CallCenter:
 
     def next(self):
       return self.customers.pop()
-
 
 c = CallCenter()
 
@@ -272,7 +267,6 @@ class Player:
             cur_node = cur_node.next
             print(cur_node.title)
 
-
 p = Player()
 while True:
     x = input()
@@ -302,7 +296,6 @@ class X():
             self.adj[x-1][y-1] = 0 
             self.adj[y-1][x-1] = 0 
             
-
 x = X(5)
 
 x.add_friend(1, 3) 
@@ -346,7 +339,6 @@ def balanced(expression):
     if(len(parentheses.data) == 0):
         return True
     else: return False
-
 
 print(balanced(input()))
 
