@@ -356,4 +356,38 @@ namespace Code_Coach_Challenge
             return (num1 + num2)/2;
         }
     }
+        class Program
+    {
+        static void Main(string[] args)
+        {
+            MusicGenres genres = new MusicGenres();
+
+            int count = 0;
+            while (count<5)
+            {
+                genres[count] = Console.ReadLine();
+                count++;
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Following: " + genres[i]);
+            }
+        }
+    }
+    class MusicGenres
+    {
+        private string[] genres = new string[5];
+        
+        //declare an indexer
+        public string this[int indexer]{
+            get{
+                return genres[indexer];
+            }
+            set{
+                genres[indexer] = value;
+            }
+        }
+        
+    }
 }
