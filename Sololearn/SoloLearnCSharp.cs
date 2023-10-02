@@ -665,12 +665,6 @@ namespace Code_Coach_Challenge
             Player player3 = new Player(Difficulty.Hard);
         }
     }
-    
-    /*
-    Easy => "You have 3 minutes 45 seconds"
-    Medium = > "You have 3 minutes 20 seconds"
-    Hard => "You have 3 minutes"
-    */
 
     class Player
     {
@@ -696,5 +690,26 @@ namespace Code_Coach_Challenge
         Easy,
         Medium,
         Hard
-    };
+    };    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] tours = { "England", "Spain", "Italy", "Portugal", "France" };
+            int choice = Convert.ToInt32(Console.ReadLine());
+            
+            //your code goes here
+            try
+            {
+                Console.WriteLine(tours[choice]);
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Wrong number");
+            }
+            finally
+            {
+                Console.WriteLine("Goodbye");
+            }
+        }
+    }
 }
