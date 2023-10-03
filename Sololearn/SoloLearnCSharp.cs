@@ -739,4 +739,24 @@ namespace Code_Coach_Challenge
             }
         }
     }
+        class Program
+    {
+        static void Main(string[] args)
+        {
+            string text = Console.ReadLine();
+            int intNum = Convert.ToInt32(Console.ReadLine());
+            double doubNum = Convert.ToDouble(Console.ReadLine());
+
+
+            Printer.Print(text);
+            Printer.Print(intNum);
+            Printer.Print(doubNum);
+        }
+    }
+    static class Printer
+    {
+        public static void Print <T>(T print){
+            Console.WriteLine("Showing " + print);
+        }
+    }
 }
