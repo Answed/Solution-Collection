@@ -796,4 +796,27 @@ namespace Code_Coach_Challenge
             }
         }
     }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numOfPlayers = Convert.ToInt32(Console.ReadLine());
+
+            List<int> scores = new List<int>();
+            int count = 0;
+            while (count<numOfPlayers)
+            {
+                int score = Convert.ToInt32(Console.ReadLine());
+                count++;
+                scores.Add(score);
+                
+            }
+
+            scores.Sort();
+
+            foreach(int score in scores){
+                Console.Write(score + " ");
+            }
+        }
+    }
 }
