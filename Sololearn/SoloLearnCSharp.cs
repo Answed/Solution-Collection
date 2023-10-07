@@ -850,4 +850,29 @@ namespace Code_Coach_Challenge
             
         }
     }
+
+        class Program
+    {
+        static void Main(string[] args)
+        {
+            int discount = Convert.ToInt32(Console.ReadLine());
+
+            Dictionary<string, double> coffee = new Dictionary<string, double>();
+            coffee.Add("Americano", 50);
+            coffee.Add("Latte", 70);
+            coffee.Add("Flat White", 60);
+            coffee.Add("Espresso", 60);
+            coffee.Add("Cappuccino", 80);
+            coffee.Add("Mocha", 90);
+
+            string[] coffeNames = coffee.Keys.ToArray();
+
+            //your code goes here
+            foreach (string name in coffeNames)
+                coffee[name] = (coffee[name] * (100-discount)) / 100;
+
+            foreach (string name in coffeNames)
+                Console.WriteLine(name + ": " + coffee[name]);
+        }
+    }
 }
