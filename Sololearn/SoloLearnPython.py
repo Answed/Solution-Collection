@@ -420,3 +420,14 @@ for i in range(len(contacts)):
         print("{} is {}".format(key_input, contacts[i][1]))
         break
 else: print("Not Found")
+
+def calc(x):
+    #your code goes here
+    	return x*4, x**2
+
+
+side = int(input())
+p, a = calc(side)
+
+print("Perimeter: " + str(p))
+print("Area: " + str(a))
