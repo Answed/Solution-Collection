@@ -404,3 +404,19 @@ data = {
 key_input = input()
 
 print(data.get(key_input, "Not found"))
+
+contacts = [
+    ('James', 42),
+    ('Amy', 24),
+    ('John', 31),
+    ('Amanda', 63),
+    ('Bob', 18)
+]
+
+key_input = input()
+
+for i in range(len(contacts)):
+    if(key_input == contacts[i][0]):
+        print("{} is {}".format(key_input, contacts[i][1]))
+        break
+else: print("Not Found")
