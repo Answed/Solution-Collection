@@ -378,3 +378,14 @@ def extended_euklid_rec(int1, int2):
     y = x - q*y
     x = temp_x
     return x, y
+
+car = {
+    'brand':'BMW',
+    'year': 2018,
+    'color': 'red',
+    'mileage': 15000
+}
+
+key_input = input()
+
+print(car[key_input])
