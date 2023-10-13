@@ -438,3 +438,11 @@ job_skills = {'HTML', 'CSS', 'JS', 'C#', 'NodeJS'}
 matched_skill = skills & job_skills
 
 print(matched_skill.pop())
+
+word = input()
+
+vowels = {'a', 'e', 'i', 'o', 'u'}
+
+result = [x for x in word if x not in vowels]
+
+print(result)
