@@ -431,3 +431,10 @@ p, a = calc(side)
 
 print("Perimeter: " + str(p))
 print("Area: " + str(a))
+
+skills = {'Python', 'HTML', 'SQL', 'C++', 'Java', 'Scala'}
+job_skills = {'HTML', 'CSS', 'JS', 'C#', 'NodeJS'}
+
+matched_skill = skills & job_skills
+
+print(matched_skill.pop())
