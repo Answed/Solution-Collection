@@ -453,3 +453,8 @@ perc = int(input())
 res = (lambda x,y:x*(y/100))(price, perc)
 
 print(res)
+
+salaries = [2000, 1800, 3100, 4400, 1500]
+bonus = int(input())
+salaries = [x + bonus for x in salaries ]
+print(salaries)
