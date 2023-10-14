@@ -458,3 +458,23 @@ salaries = [2000, 1800, 3100, 4400, 1500]
 bonus = int(input())
 salaries = [x + bonus for x in salaries ]
 print(salaries)
+
+def isPrime(x):
+    if x < 2:
+        return False
+    elif x == 2:
+        return True  
+    for n in range(2, x):
+        if x % n ==0:
+            return False
+    return True
+
+def primeGenerator(a, b):
+    for x in range(a,b):
+        if(isPrime(x)): yield x
+
+    
+f = int(input())
+t = int(input())
+
+print(list(primeGenerator(f, t)))
