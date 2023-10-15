@@ -500,3 +500,12 @@ def convert(num):
 num = int(input())
 
 print(convert(num))
+
+def my_min(*args):
+    smalles_num = 999999999
+    for i in range(len(args)):
+        if(args[i] < smalles_num):
+            smalles_num = args[i]
+    return smalles_num
+
+print(my_min(8, 13, 4, 42, 120, 7))
