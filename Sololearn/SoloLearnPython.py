@@ -478,3 +478,17 @@ f = int(input())
 t = int(input())
 
 print(list(primeGenerator(f, t)))
+
+def decor(func):
+    def wrap(num):
+        print("***")
+        func(num)
+        print("***")
+        print("END OF PAGE")
+    return wrap
+
+@decor
+def invoice(num):
+    print("INVOICE #" +num)
+
+invoice(input());
