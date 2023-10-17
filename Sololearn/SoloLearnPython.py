@@ -547,3 +547,34 @@ h = int(input())
 r = Rectangle(w, h)
 r.area()
 r.perimeter()
+
+class Shape: 
+    def __init__(self, w, h):
+        self.width = w
+        self.height = h
+
+    def area(self):
+        return self.width*self.height
+
+    #your code goes here
+    def __add__(self, shape2):
+        tempShape = Shape(self.width + shape2.width, self.height + shape2.height)
+        return tempShape
+    
+    def __lt__(self, other):
+        if(self.area() < other.area()):
+            return True
+        else: return False
+    
+
+w1 = int(input())
+h1 = int(input())
+w2 = int(input())
+h2 = int(input())
+
+s1 = Shape(w1, h1)
+s2 = Shape(w2, h2)
+result = s1 + s2
+
+print(result.area())
+print(s1 > s2)
