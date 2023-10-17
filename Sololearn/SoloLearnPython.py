@@ -509,3 +509,20 @@ def my_min(*args):
     return smalles_num
 
 print(my_min(8, 13, 4, 42, 120, 7))
+
+class Player:
+    def __init__(self, name, level):
+        self.name = name
+        self.level = level
+
+    def intro(self):
+        print(self.name + " (Level " + self.level + ")")
+
+#your code goes here
+
+name = input()
+level = input()
+
+new_player = Player(name, level)
+
+new_player.intro()
