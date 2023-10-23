@@ -593,3 +593,17 @@ p = Player("Cyberpunk77", 3)
 p.hit()
 p.hit()
 p.hit()
+
+class Shape():
+    
+    @classmethod
+    def area(self, w, h):
+        return w*h
+
+
+
+
+w = int(input())
+h = int(input())
+
+print(Shape.area(w, h))
